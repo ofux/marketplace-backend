@@ -10,13 +10,13 @@ use rocket_okapi::{openapi, JsonSchema};
 use uuid::Uuid;
 
 use crate::routes::{
-	api_key::ApiKey, to_http_api_problem::ToHttpApiProblem, u256::U256Param, uuid::UuidParam,
+	api_key::ApiKey, hex_string::HexString, to_http_api_problem::ToHttpApiProblem, uuid::UuidParam,
 };
 
 #[derive(Deserialize, JsonSchema)]
 #[serde(crate = "rocket::serde")]
 pub struct AssignContributorDto {
-	contributor_id: U256Param,
+	contributor_id: HexString,
 }
 
 #[openapi(tag = "Contributions")]
@@ -31,7 +31,7 @@ pub async fn assign_contributor(
 	body: Json<AssignContributorDto>,
 	usecase: &State<Box<dyn AssignContributionUsecase>>,
 ) -> Result<status::Accepted<()>, HttpApiProblem> {
-	let contributor_id = body.into_inner().contributor_id.into();
+	let contributor_id = body.into_inner().contributor_id.0.into();
 	let contribution_id: ContributionId = Uuid::from(contribution_id).into();
 
 	usecase
@@ -74,7 +74,7 @@ mod test {
 			ApiKey::default(),
 			Uuid::from_u128(12).into(),
 			AssignContributorDto {
-				contributor_id: U256::from_u128(34).into(),
+				contributor_id: HexString::from(34u128).into(),
 			}
 			.into(),
 			State::get(&rocket).unwrap(),

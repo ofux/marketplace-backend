@@ -11,7 +11,9 @@ use rocket::{serde::json::Json, State};
 use rocket_okapi::openapi;
 use uuid::Uuid;
 
-use crate::routes::{to_http_api_problem::ToHttpApiProblem, u256::U256Param, uuid::UuidParam};
+use crate::routes::{
+	hex_string::HexString, to_http_api_problem::ToHttpApiProblem, uuid::UuidParam,
+};
 
 #[derive(Debug)]
 struct ContributorIdDynamicParameter(ContributorId);
@@ -20,7 +22,7 @@ struct ContributorIdDynamicParameter(ContributorId);
 #[get("/contributions/<contribution_id>/applications?<contributor_id>")]
 pub async fn list_applications(
 	contribution_id: UuidParam,
-	contributor_id: Option<U256Param>,
+	contributor_id: Option<HexString>,
 	application_repository: &State<Arc<dyn ApplicationRepository>>,
 ) -> Result<Json<Vec<dto::Application>>, HttpApiProblem> {
 	let contribution_id: ContributionId = Uuid::from(contribution_id).into();

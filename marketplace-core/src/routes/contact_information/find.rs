@@ -5,13 +5,13 @@ use rocket::{get, serde::json::Json, State};
 use rocket_okapi::openapi;
 use std::{result::Result, sync::Arc};
 
-use crate::routes::{to_http_api_problem::ToHttpApiProblem, u256::U256Param};
+use crate::routes::{hex_string::HexString, to_http_api_problem::ToHttpApiProblem};
 
 #[openapi(tag = "Contributors")]
 #[get("/contributors/<contributor_id>/contact-information")]
 pub fn find_contact_information(
 	contact_information_service: &State<Arc<dyn ContactInformationService>>,
-	contributor_id: U256Param,
+	contributor_id: HexString,
 ) -> Result<Json<dto::ContactInformation>, HttpApiProblem> {
 	let contact_information = contact_information_service
 		.get_contributor_contact_information(&contributor_id.into())
@@ -53,7 +53,7 @@ mod test {
 
 		let result = find_contact_information(
 			State::get(&rocket).unwrap(),
-			U256Param::from_str(CONTRIBUTOR_ID).unwrap(),
+			HexString::from_str(CONTRIBUTOR_ID).unwrap(),
 		);
 		assert!(result.is_err());
 
@@ -81,7 +81,7 @@ mod test {
 
 		let result = find_contact_information(
 			State::get(&rocket).unwrap(),
-			U256Param::from_str(CONTRIBUTOR_ID).unwrap(),
+			HexString::from_str(CONTRIBUTOR_ID).unwrap(),
 		);
 		assert!(result.is_err());
 
@@ -114,7 +114,7 @@ mod test {
 
 		let result = find_contact_information(
 			State::get(&rocket).unwrap(),
-			U256Param::from_str(CONTRIBUTOR_ID).unwrap(),
+			HexString::from_str(CONTRIBUTOR_ID).unwrap(),
 		);
 		assert!(result.is_ok(), "{:?}", result.err().unwrap());
 

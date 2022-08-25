@@ -9,12 +9,12 @@ use rocket::{serde::json::Json, State};
 use rocket_okapi::openapi;
 use std::sync::Arc;
 
-use crate::routes::{to_http_api_problem::ToHttpApiProblem, u256::U256Param};
+use crate::routes::{hex_string::HexString, to_http_api_problem::ToHttpApiProblem};
 
 #[openapi(tag = "Applications")]
 #[get("/applications?<contributor_id>")]
 pub async fn list_contributor_applications(
-	contributor_id: Option<U256Param>,
+	contributor_id: Option<HexString>,
 	application_repository: &State<Arc<dyn ApplicationRepository>>,
 ) -> Result<Json<Vec<dto::Application>>, HttpApiProblem> {
 	let contributor_id = contributor_id.map(|id| id.into());

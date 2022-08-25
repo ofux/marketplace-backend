@@ -10,12 +10,14 @@ use schemars::JsonSchema;
 use serde::Deserialize;
 use uuid::Uuid;
 
-use crate::routes::{to_http_api_problem::ToHttpApiProblem, u256::U256Param, uuid::UuidParam};
+use crate::routes::{
+	hex_string::HexString, to_http_api_problem::ToHttpApiProblem, uuid::UuidParam,
+};
 
 #[derive(Deserialize, JsonSchema)]
 #[serde(crate = "rocket::serde")]
 pub struct ApplyDto {
-	contributor_id: U256Param,
+	contributor_id: HexString,
 }
 
 #[openapi(tag = "Contributions")]
