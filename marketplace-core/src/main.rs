@@ -141,6 +141,8 @@ fn inject_app(
 		starknet.clone(),
 	));
 
+	let webhook_projector = Arc::new(WebhookProjector::new());
+
 	rocket
 		.manage(CreateContribution::new_usecase_boxed(starknet.clone()))
 		.manage(AssignContribution::new_usecase_boxed(
@@ -155,6 +157,7 @@ fn inject_app(
 			contribution_repository,
 			database.clone(),
 			application_projector.clone(),
+			webhook_projector,
 			uuid_generator,
 		))
 		.manage(ValidateContribution::new_usecase_boxed(

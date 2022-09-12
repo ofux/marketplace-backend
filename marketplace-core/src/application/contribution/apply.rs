@@ -18,6 +18,7 @@ pub struct ApplyToContribution {
 	contribution_repository: AggregateRootRepository<Contribution>,
 	event_store: Arc<dyn EventStore<Contribution>>,
 	application_projector: Arc<ApplicationProjector>,
+	webhook_projector: Arc<WebhookProjector>,
 	uuid_generator: Arc<dyn UuidGenerator>,
 }
 
@@ -26,12 +27,14 @@ impl ApplyToContribution {
 		contribution_repository: AggregateRootRepository<Contribution>,
 		event_store: Arc<dyn EventStore<Contribution>>,
 		application_projector: Arc<ApplicationProjector>,
+		webhook_projector: Arc<WebhookProjector>,
 		uuid_generator: Arc<dyn UuidGenerator>,
 	) -> Self {
 		Self {
 			contribution_repository,
 			event_store,
 			application_projector,
+			webhook_projector,
 			uuid_generator,
 		}
 	}
@@ -42,12 +45,14 @@ impl ApplyToContribution {
 		contribution_repository: AggregateRootRepository<Contribution>,
 		event_store: Arc<dyn EventStore<Contribution>>,
 		application_projector: Arc<ApplicationProjector>,
+		webhook_projector: Arc<WebhookProjector>,
 		uuid_generator: Arc<dyn UuidGenerator>,
 	) -> Box<dyn Usecase> {
 		Box::new(Self::new(
 			contribution_repository,
 			event_store,
 			application_projector,
+			webhook_projector,
 			uuid_generator,
 		))
 	}
@@ -75,6 +80,11 @@ impl Usecase for ApplyToContribution {
 		// a bus
 		for event in &events {
 			self.application_projector.project(event).await;
+			<WebhookProjector as Projector<WebhookContributionProjection>>::project(
+				&self.webhook_projector,
+				event,
+			)
+			.await;
 		}
 
 		Ok(())

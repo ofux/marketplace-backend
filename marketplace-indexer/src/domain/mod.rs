@@ -18,5 +18,5 @@ use observers::Observer;
 pub use observers::{
 	ConfirmedObserver, ContributionObserver, EventStoreObserver, Logger as BlockchainLogger,
 	MockObserver as MockBlockchainObserver, ObservedEvent, Observer as BlockchainObserver,
-	ObserverComposite as BlockchainObserverComposite, ProjectObserver,
+	ObserverComposite as BlockchainObserverComposite, ProjectObserver, WebhookObserver,
 };

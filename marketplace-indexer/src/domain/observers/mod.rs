@@ -19,6 +19,9 @@ use serde::{Deserialize, Serialize};
 mod event_store;
 pub use event_store::EventStoreObserver;
 
+mod webhook;
+pub use webhook::WebhookObserver;
+
 use crate::domain::*;
 use mockall::automock;
 
