@@ -1868,6 +1868,7 @@ dependencies = [
  "assert_matches",
  "async-trait",
  "chrono",
+ "claim",
  "crypto-bigint 0.4.8",
  "diesel",
  "diesel_migrations",
@@ -1893,6 +1894,7 @@ dependencies = [
  "tokio",
  "url",
  "uuid 0.8.2",
+ "wiremock",
 ]
 
 [[package]]
