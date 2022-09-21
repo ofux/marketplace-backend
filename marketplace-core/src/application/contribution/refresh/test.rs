@@ -27,6 +27,8 @@ mock! {
 		) -> Result<GithubRepo, GithubClientError>;
 
 		async fn find_user_by_id(&self, user_id: GithubUserId) -> Result<GithubUser, GithubClientError>;
+
+		async fn authenticate_user(&self, authorization_code: String) -> Result<GithubUserId, GithubClientError>;
 	}
 }
 

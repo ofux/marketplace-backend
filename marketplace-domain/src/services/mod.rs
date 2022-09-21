@@ -21,6 +21,9 @@ pub use github_client::{Error as GithubClientError, GithubClient};
 mod contributor;
 pub use contributor::{Error as ContributorServiceError, Service as ContributorService};
 
+mod onchain_account_verifier;
+pub use onchain_account_verifier::{Error as OnChainAccountVerifierError, OnChainAccountVerifier};
+
 #[cfg(test)]
 pub use github_client::MockGithubClient;
 
