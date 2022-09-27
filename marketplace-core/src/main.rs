@@ -1,3 +1,4 @@
+mod marketplace_tracing;
 mod routes;
 
 use dotenv::dotenv;
@@ -28,11 +29,20 @@ fn create_root_logger() -> Logger {
 	logger::create_root_logger(drain)
 }
 
+#[tracing::instrument]
+fn foo(bar: String) -> String {
+	bar + " smith"
+}
+
 #[tokio::main]
 async fn main() {
 	dotenv().ok();
 
 	let _global_logger_guard = logger::set_global_logger(create_root_logger());
+
+	marketplace_tracing::setup_tracing();
+	tracing::info!("This event will be logged in the root span.");
+	foo("john".to_string());
 
 	github::Client::initialize();
 
