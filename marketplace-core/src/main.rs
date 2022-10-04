@@ -15,6 +15,8 @@ use rocket_okapi::{openapi_get_routes, swagger_ui::make_swagger_ui};
 use slog::{Drain, Level, Logger};
 use std::sync::Arc;
 
+use crate::marketplace_tracing::{get_span_id, get_trace_id, get_tracing_id, get_tracing_span_id};
+
 #[macro_use]
 extern crate rocket;
 
@@ -31,17 +33,35 @@ fn create_root_logger() -> Logger {
 
 #[tracing::instrument]
 fn foo(bar: String) -> String {
-	bar + " smith"
+	// tracing::warn_span!("New WARN span?");
+	// tracing::warn!("This is my WARN trace!");
+	// let a = get_tracing_id();
+	// let b = get_tracing_span_id();
+	// log::warn!("BBBBBBBBBBB! TRACE {}, SPAN {}", a, b);
+	log::error!("to");
+	fee(bar) + " smith"
+}
+
+#[tracing::instrument]
+fn fee(bar: String) -> String {
+	// tracing::warn_span!("New WARN span?");
+	// tracing::warn!("This is my WARN trace!");
+	// let a = get_tracing_id();
+	// let b = get_tracing_span_id();
+	// log::warn!("BBBBBBBBBBB! TRACE {}, SPAN {}", a, b);
+	log::info!("kyo");
+	bar + " PhD"
 }
 
 #[tokio::main]
 async fn main() {
 	dotenv().ok();
 
-	let _global_logger_guard = logger::set_global_logger(create_root_logger());
-
 	marketplace_tracing::setup_tracing();
-	tracing::info!("This event will be logged in the root span.");
+	//let _global_logger_guard = logger::set_global_logger(create_root_logger());
+
+	tracing::info!("This is my INFO trace!");
+	log::info!("This is my INFO log!");
 	foo("john".to_string());
 
 	github::Client::initialize();

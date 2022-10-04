@@ -1,0 +1,106 @@
+Oct 03 19:16:25.638 INFO This is my INFO trace!, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.638 INFO This is my INFO log!, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.638 INFO foo; bar="john", span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.638 WARN New WARN span?;, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.638 WARN This is my WARN trace!, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.638 INFO span.is_none() true, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.638 INFO span.is_disabled() true, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.638 INFO span.id() None, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.638 WARN This is my WARN log! TRACE 00000000000000000000000000000000, SPAN 0000000000000000, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.787 INFO 🔧 Configured for debug., span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.787 INFO address: [1;49;39m0.0.0.0[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.787 INFO port: [1;49;39m8000[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.787 INFO workers: [1;49;39m10[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.787 INFO ident: [1;49;39mRocket[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.787 INFO limits: [1;49;39mbytes = 8KiB, data-form = 2MiB, file = 1MiB, form = 32KiB, json = 1MiB, msgpack = 1MiB, string = 8KiB[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.787 INFO temp dir: [1;49;39m/var/folders/3r/m7zfs7zx0mnf5jlxfyg9xsh40000gn/T/[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.787 INFO http/2: [1;49;39mtrue[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.787 INFO keep-alive: [1;49;39m5[0m[1;49;39ms[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.787 INFO tls: [1;49;39mdisabled[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.787 INFO shutdown: [1;49;39mctrlc = true, force = true, signals = [SIGTERM], grace = 2s, mercy = 3s[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.787 INFO log level: [1;49;39mnormal[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.787 INFO cli colors: [1;49;39mtrue[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.787 INFO 📬 [35mRoutes[0m:, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.787 INFO [36m([0m[37mhealth_check[0m[36m)[0m [32mGET[0m [34m/health[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.787 INFO [36m([0m[37mnew_project[0m[36m)[0m [32mPOST[0m [34m/projects[0m [33mapplication/json[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.787 INFO [36m([0m[37mlist_projects[0m[36m)[0m [32mGET[0m [34m/projects[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.787 INFO [36m([0m[37moptions_preflight_handler[0m[36m)[0m [32mOPTIONS[0m [34m/<_path..>[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.787 INFO [36m([0m[37mlist_contributor_applications[0m[36m)[0m [32mGET[0m [34m/applications?<contributor_id>[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.787 INFO [36m([0m[37mget_contributor_by_account[0m[36m)[0m [32mGET[0m [34m/contributors?<contributor_account>[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.787 INFO [32mGET[0m [34m/openapi.json[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.787 INFO [36m([0m[37mrefresh_projects[0m[36m)[0m [32mPOST[0m [34m/projects/refresh[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.787 INFO [36m([0m[37mcreate_contribution[0m[36m)[0m [32mPOST[0m [34m/contributions/github[0m [33mapplication/json[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.787 INFO [36m([0m[37mrefresh_applications[0m[36m)[0m [32mPOST[0m [34m/applications/refresh[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.787 INFO [36m([0m[37mrefresh_contributors[0m[36m)[0m [32mPOST[0m [34m/contributors/refresh[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.787 INFO [36m([0m[37mrefresh_contributions[0m[36m)[0m [32mPOST[0m [34m/contributions/refresh[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.787 INFO [36m([0m[37mget_contributor[0m[36m)[0m [32mGET[0m [34m/contributors/<contributor_id>[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.787 INFO [36m([0m[37mvalidate_contribution[0m[36m)[0m [32mPOST[0m [34m/contributions/<contribution_id>/validate[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.787 INFO [36m([0m[37massociate_github_account[0m[36m)[0m [32mPUT[0m [34m/contributors/<contributor_account>/github[0m [33mapplication/json[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.787 INFO [36m([0m[37massign_contributor[0m[36m)[0m [32mPOST[0m [34m/contributions/<contribution_id>/contributor[0m [33mapplication/json[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.787 INFO [36m([0m[37munassign_contributor[0m[36m)[0m [32mDELETE[0m [34m/contributions/<contribution_id>/contributor[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.787 INFO [36m([0m[37mapply_to_contribution[0m[36m)[0m [32mPOST[0m [34m/contributions/<contribution_id>/applications[0m [33mapplication/json[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.787 INFO [36m([0m[37mrefuse_contributor_application[0m[36m)[0m [32mDELETE[0m [34m/contributions/<contribution_id>/applications?<contributor_id>[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.787 INFO [36m([0m[37mlist_applications[0m[36m)[0m [32mGET[0m [34m/contributions/<contribution_id>/applications?<contributor_id>[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.787 INFO [36m([0m[37mfind_contact_information[0m[36m)[0m [32mGET[0m [34m/contributors/<contributor_id>/contact-information[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.787 INFO [36m([0m[37mput_contact_information[0m[36m)[0m [32mPUT[0m [34m/contributors/<contributor_id>/contact-information[0m [33mapplication/json[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.787 INFO [36m([0m[37maccept_application[0m[36m)[0m [32mPUT[0m [34m/applications/<contribution_id>/<contributor_id>/accept[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.787 INFO [32mGET[0m [4;34m/swagger[0m[34m/[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.787 INFO [32mGET[0m [4;34m/swagger[0m[34m/index.css[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.788 INFO [32mGET[0m [4;34m/swagger[0m[34m/index.html[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.788 INFO [32mGET[0m [4;34m/swagger[0m[34m/swagger-ui.css[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.788 INFO [32mGET[0m [4;34m/swagger[0m[34m/oauth2-redirect.html[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.788 INFO [32mGET[0m [4;34m/swagger[0m[34m/swagger-ui-bundle.js[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.788 INFO [32mGET[0m [4;34m/swagger[0m[34m/swagger-ui-config.json[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.788 INFO [32mGET[0m [4;34m/swagger[0m[34m/swagger-initializer.js[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.788 INFO [32mGET[0m [4;34m/swagger[0m[34m/swagger-ui-standalone-preset.js[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.788 INFO 📡 [35mFairings[0m:, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.788 INFO [1;49;39mAdd CORS headers to responses[0m ([1;34mresponse[0m), span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.788 INFO [1;49;39mShield[0m ([1;34mliftoff, response, singleton[0m), span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.788 INFO 🛡️ [35mShield[0m:, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.788 INFO X-Content-Type-Options: [49;39mnosniff[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.788 INFO X-Frame-Options: [49;39mSAMEORIGIN[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.788 INFO Permissions-Policy: [49;39minterest-cohort=()[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.788 INFO 🚀 [1;49;39mRocket has launched from[0m [1;4;49;39mhttp://0.0.0.0:8000[0m, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.788 WARN Rocket is executing inside of a custom runtime., span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.788 INFO Rocket's runtime is enabled via `#[rocket::main]` or `#[launch]`., span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:25.788 INFO Forced shutdown is disabled. Runtime settings may be suboptimal., span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:30.643 DEBG starting new connection: http://localhost:8126/, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:30.643 DEBG resolving host="localhost", span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:30.646 DEBG connecting to [::1]:8126, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:30.647 DEBG connecting to 127.0.0.1:8126, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:30.647 DEBG connected to 127.0.0.1:8126, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:30.652 DEBG flushed 335 bytes, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:30.652 DEBG parsed 5 headers, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:30.652 DEBG incoming body is content-length (111 bytes), span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:30.652 DEBG incoming body completed, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:30.652 DEBG pooling idle connection for ("http", localhost:8126), span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:30.652 DEBG response '200 OK' for http://localhost:8126/v0.5/traces, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:35.640 DEBG reuse idle connection for ("http", localhost:8126), span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:35.641 DEBG flushed 810 bytes, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:35.642 DEBG parsed 5 headers, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:35.642 DEBG incoming body is content-length (40 bytes), span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:35.642 DEBG incoming body completed, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:35.642 DEBG pooling idle connection for ("http", localhost:8126), span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:35.642 DEBG response '200 OK' for http://localhost:8126/v0.5/traces, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:40.642 DEBG reuse idle connection for ("http", localhost:8126), span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:40.644 DEBG flushed 808 bytes, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:40.644 DEBG parse error (connection error: Connection reset by peer (os error 54)) with 0 bytes, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:40.644 DEBG read_head error: connection error: Connection reset by peer (os error 54), span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:40.644 DEBG error shutting down IO: Socket is not connected (os error 57), span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:40.644 DEBG client connection error: error shutting down connection: Socket is not connected (os error 57), span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:45.640 DEBG starting new connection: http://localhost:8126/, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:45.640 DEBG resolving host="localhost", span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:45.642 DEBG connecting to [::1]:8126, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:45.643 DEBG connecting to 127.0.0.1:8126, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:45.643 DEBG connected to 127.0.0.1:8126, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:45.645 DEBG flushed 621 bytes, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:45.646 DEBG parsed 5 headers, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:45.646 DEBG incoming body is content-length (111 bytes), span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:45.646 DEBG incoming body completed, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:45.646 DEBG pooling idle connection for ("http", localhost:8126), span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:45.646 DEBG response '200 OK' for http://localhost:8126/v0.5/traces, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:47.035 WARN Received SIGINT. Requesting shutdown., span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:47.037 INFO Shutdown requested. Waiting for pending I/O..., span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:47.037 DEBG signal received, starting graceful shutdown, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:47.037 INFO Graceful shutdown completed successfully., span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
+Oct 03 19:16:47.037 INFO Gracefully shut down, span_id: 0000000000000000, trace_id: 00000000000000000000000000000000, commit: local_development
