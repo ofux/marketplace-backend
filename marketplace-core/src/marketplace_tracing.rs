@@ -4,8 +4,16 @@ use opentelemetry::{
 	Key,
 };
 use opentelemetry_datadog::ApiVersion;
+use tracing_log::LogTracer;
 use tracing_opentelemetry::OpenTelemetrySpanExt;
-use tracing_subscriber::{layer::SubscriberExt, EnvFilter, Registry};
+use tracing_subscriber::{
+	fmt::{format, FormatFields},
+	layer::SubscriberExt,
+	prelude::__tracing_subscriber_field_MakeExt,
+	EnvFilter, Registry,
+};
+
+use crate::datadog_event_format;
 
 pub fn setup_tracing() {
 	// Install a new OpenTelemetry trace pipeline
@@ -44,6 +52,8 @@ pub fn setup_tracing() {
 		// subscriber configuration
 		.with_env_filter(EnvFilter::from_default_env())
 		.with_max_level(tracing::Level::TRACE)
+		.with_ansi(false)
+		.event_format(datadog_event_format::TraceIdFormat)
 		.finish()
 		.with(telemetry);
 
@@ -56,7 +66,7 @@ pub fn setup_tracing() {
 	// Trace executed code
 	tracing::subscriber::set_global_default(subscriber).unwrap();
 
-	//LogTracer::init().unwrap();
+	LogTracer::init().unwrap();
 	//tracing_log::env_logger::init();
 }
 

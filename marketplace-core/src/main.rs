@@ -1,3 +1,4 @@
+mod datadog_event_format;
 mod marketplace_tracing;
 mod routes;
 
@@ -50,6 +51,13 @@ fn fee(bar: String) -> String {
 	// let b = get_tracing_span_id();
 	// log::warn!("BBBBBBBBBBB! TRACE {}, SPAN {}", a, b);
 	log::info!("kyo");
+	tracing::event!(
+		tracing::Level::INFO,
+		msg = "message",
+		answer = 42,
+		question = "life, the universe, and everything",
+		"what?"
+	);
 	bar + " PhD"
 }
 
