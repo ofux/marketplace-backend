@@ -53,7 +53,9 @@ pub fn setup_tracing() {
 		.with_env_filter(EnvFilter::from_default_env())
 		.with_max_level(tracing::Level::TRACE)
 		.with_ansi(false)
-		.event_format(datadog_event_format::TraceIdFormat)
+		.event_format(datadog_event_format::TraceIdFormat::new(
+			tracing_subscriber::fmt::format(),
+		))
 		.finish()
 		.with(telemetry);
 
